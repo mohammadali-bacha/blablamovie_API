@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/stylesheets/bootstrap/4.1.3/bootstrap.min.css">      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../assets/stylesheets/materialize/1.0.0/materialize.min.css"  media="screen,projection"/>
+
+    <script src="../assets/js/bootstrap/4.1.3/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/js/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/popper/1.14.7/popper.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../assets/js/materialize/1.0.0/materialize.min.js"></script>
+
+
+</head>
+
+<style>
+    body {
+  min-height: 75rem;
+}
+    .themed {
+        background-color: rgba(86, 61, 100, 0.5);
+    }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+
+      .float-left{
+        left: 800px; 
+      }
+      .btn-info{
+        margin-right:6px
+      }
+      .btn-success{
+        margin-left:6px
+      }
+    }
+</style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="/users">Users <span class="sr-only">(current)</span></a>
+          </li>
+            <button type="button" class="btn btn-success" onclick="window.location.href = '/signin';">Sign In</button>
+            </ul>
+            <button type="button" class="btn btn-info" onclick="window.location.href = '/signup';">Sign Up</button>
+
+            <button type="button" class="btn btn-danger float-left" href="">Sign Out</button>
+
+        </div>
+    </nav>
+
+
+</body>
+
+</html>
