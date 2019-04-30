@@ -33,6 +33,25 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="/users">Users <span class="sr-only">(current)</span></a>
+          </li>
+            <button type="button" class="btn btn-success" onclick="window.location.href = '/signin';">Sign In</button>
+            </ul>
+            <button type="button" class="btn btn-info" onclick="window.location.href = '/signup';">Sign Up</button>
+
+            <button type="button" class="btn btn-danger float-left" href="">Sign Out</button>
+
+        </div>
+    </nav>
     <div class="container">
         <div class=""></div>
         <h2>Formulaire d'inscription</h2>
@@ -40,25 +59,26 @@
 
     <div class="">
         <form method="post" class="" action="/signup">
-
-            <div class="">
-                <label for="firstName">Prénom</label>
-                <input type="text" class="" id="firstName" placeholder="" name="firstName" value="" required>
-            </div>
-
-            <div class="">
-                <label for="lastName">Nom</label>
-                <input type="text" class="" id="lastName" placeholder="" name="lastName" value="" required>
-            </div>
             <div class="">
                 <label for="email">Email</label>
                 <input type="email" class="" id="email" name="email" value="" placeholder="you@example.com">
             </div>
 
             <div class="">
-                <label for="passwordInput">Mot de passe</label>
-                <input type="password" class="" id="passwordInput" name="password" value="" placeholder="Password">
+                <label for="pseudo">Pseudo</label>
+                <input type="text" class="" id="pseudo" placeholder="" name="pseudo" value="" required>
             </div>
+
+            <div class="">
+                <label for="birth">Date de naissance</label>
+                <input type="date" class="" id="birth" placeholder="" name="birth" value="" required>
+            </div>
+
+                        <div class="">
+                <label for="movie">Choix de film</label>
+                <input type="text" class="" id="movie" placeholder="" name="movie" value="" required>
+            </div>
+
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>

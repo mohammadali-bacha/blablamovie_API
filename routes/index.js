@@ -24,7 +24,7 @@ router.get('/signin', UsersControllers.signin); // requête get pointant vers si
 
 router.get('/users', UsersControllers.index); //requête get pointant vers /users
 
-router.post('/signupAsync', UsersControllers.signupAsync); //requête post pointant vers /signupAsync
+// router.post('/signupAsync', UsersControllers.signupAsync); //requête post pointant vers /signupAsync
 
 router.get('/', HomeControllers.index); //requête get pointant vers la racine du serveur
 

@@ -46,29 +46,29 @@ class UsersControllers { //ceci est le contrôleur de la vue Users
     // api json :
     //------------
 
-    static signupAsync(req, res) { // cette méthode static prends en paramètres la requête et la réponse
-        (async function (req, res) { // fonction anonyme asynchrone prenant la requête et la réponse en paramètres
-            const {
-                email,
-                password,
-                firstName,
-                lastName
-            } = req.body;
-            const userData = await User.create({ // on crée les valeurs d'email, password et name et firstname
-                email: email,
-                password: password,
-                firstName: firstName,
-                lastName: lastName
-            })
-            return res.status(201).send({ // on rend la vue home avec le fichier index.html contenu dedans
-                succes: true,
-                message: 'user succesfull',
-                user: userData
-            })
+    // static signupAsync(req, res) { // cette méthode static prends en paramètres la requête et la réponse
+    //     (async function (req, res) { // fonction anonyme asynchrone prenant la requête et la réponse en paramètres
+    //         const {
+    //             email,
+    //             password,
+    //             firstName,
+    //             lastName
+    //         } = req.body;
+    //         const userData = await User.create({ // on crée les valeurs d'email, password et name et firstname
+    //             email: email,
+    //             password: password,
+    //             firstName: firstName,
+    //             lastName: lastName
+    //         })
+    //         return res.status(201).send({ // on rend la vue home avec le fichier index.html contenu dedans
+    //             succes: true,
+    //             message: 'user succesfull',
+    //             user: userData
+    //         })
 
-        })(req, res)
-        // on récupère les paramètres de requête et réponse
-    }
+    //     })(req, res)
+    //     // on récupère les paramètres de requête et réponse
+    // }
 
 
     static signup(req, res) { // methode statique signup 
@@ -78,15 +78,15 @@ class UsersControllers { //ceci est le contrôleur de la vue Users
         console.log(req.body);
         const {
             email,
-            password,
-            firstName,
-            lastName
+            pseudo,
+            birth,
+            movie,
         } = req.body;
         return User.create({ // on crée les valeurs d'email, password et name et firstname
             email: email,
-            password: password,
-            firstName: firstName,
-            lastName: lastName
+            pseudo: pseudo,
+            birth: birth,
+            movie: movie
         }).then(()=> res.render('helloWorld'));
         
     }
